@@ -1,0 +1,24 @@
+body{
+    background-color: lightblue;
+}
+.container-no-favorite{
+    border: 1px solid blue;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+    margin: 20px;
+}
+.container-favorite{
+    border: 1px solid green;
+    background-color: lightgreen;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+    margin: 20px;
+}
+.image-film{
+
+}
