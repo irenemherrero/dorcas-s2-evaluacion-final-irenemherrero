@@ -1,41 +1,52 @@
 'use strict';
 
-var button = document.querySelector(".button-search");
-var input = document.querySelector(".input-film");
-var containerResults = document.querySelector(".container-results");
+var button = document.querySelector('.button-search');
+var input = document.querySelector('.input-film');
+var containerResults = document.querySelector('.container-results');
 
 
-function searchFilms(){
-    var inputContent = input.value;
-    var url = "http://api.tvmaze.com/search/shows?q="
-    fetch(url + inputContent)
-    .then(function(response){
-        return response.json();
+function searchFilms() {
+  var inputContent = input.value;
+  var url = 'http://api.tvmaze.com/search/shows?q=';
+  fetch(url + inputContent)
+    .then(function (response) {
+      return response.json();
     })
-    .then(function(responseJson){
-        containerResults.innerHTML = "";
-        var ul = document.createElement("ul");
-        containerResults.appendChild(ul);
-        for (var i = 0; i< responseJson.length; i++){
-            var li = document.createElement("li");
-            var title = document.createElement("h2");
-            var titleContent = document.createTextNode(responseJson[i].show.name);
-            title.appendChild(titleContent);
-            li.appendChild(title);   
-            var image = document.createElement("img");
-                if(responseJson[i].show.image === null){
-                    image.src = "https://via.placeholder.com/210x295/cccccc/666666/?text=TV";
-                } else {
-                    image.src = responseJson[i].show.image.medium;
-                }
-            li.append(image);
-            ul.appendChild(li);
-            
+    .then(function (responseJson) {
+      containerResults.innerHTML = '';
+      var ul = document.createElement('ul');
+      containerResults.appendChild(ul);
+      for (var i = 0; i < responseJson.length; i++) {
+        var li = document.createElement('li');
+        li.classList.add('container-no-favorite');
+        var title = document.createElement('h2');
+        var titleContent = document.createTextNode(responseJson[i].show.name);
+        title.appendChild(titleContent);
+        li.appendChild(title);
+        var image = document.createElement('img');
+        image.classList.add('image-film');
+        if (responseJson[i].show.image === null) {
+          image.src = 'https://via.placeholder.com/210x295/cccccc/666666/?text=TV';
+        } else {
+          image.src = responseJson[i].show.image.medium;
         }
-    })
-    // .then(function()
+        li.append(image);
+        li.addEventListener("click", changeFavorite);
+        ul.appendChild(li);
+      }
+    });
 }
 
 
+function changeFavorite(e){
+  var li = e.currentTarget;
+  console.log(li);
+  if(li.classList.contains("container-no-favorite")){
+    li.classList.toggle("container-favorite")
+  } else {
+    li.classList.delete("container-favorite")
+  }
+}
 
-button.addEventListener("click", searchFilms);
+
+button.addEventListener('click', searchFilms);
