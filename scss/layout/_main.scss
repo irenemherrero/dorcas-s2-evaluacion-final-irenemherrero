@@ -1,24 +1,61 @@
-body{
-    background-color: lightblue;
+body {
+    margin: 0;
+    font-size: $font-size-xl;
+    font-family: $font-family-primary;
+    font-weight: $normal;
+    background-color: $color-primary;
+    color:$color-secondary;
+    box-sizing:border-box;
+  }
+
+.title {
+    text-align: center;
+    font-family: $font-family-special;
+}
+.container-searcher{
+    text-align: center;
+}
+.film-title{
+    font-family: $font-family-special;
+    margin:0, 10;
+}
+.input-film{
+    border-style: none;
+    outline: none;
+    border-bottom: 1px solid $color-secondary;
+    font-size: $font-size-m-plus;
+}
+.button-search{
+    background-color: $color-happy;
+    cursor: pointer;
+    color: $color-primary; 
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 30px;
+    font-size: $font-size-m;
+}
+
+.list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
 .container-no-favorite{
-    border: 1px solid blue;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 20px;
+    background-color: $color-happy-light;
+    border-radius:5px;
+    list-style:none;
+    padding: 20px;
     margin: 20px;
+    cursor: pointer;
 }
 .container-favorite{
-    border: 1px solid green;
-    background-color: lightgreen;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 20px;
-    margin: 20px;
+    border: 3px solid $color-favourite;
+    background-color: $color-favourite-light;
 }
 .image-film{
-
+    border-radius: 5px;
 }
