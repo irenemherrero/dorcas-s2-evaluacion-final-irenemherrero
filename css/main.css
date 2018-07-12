@@ -1,6 +1,6 @@
 body {
-  margin: 0;
-  font-size: 24px;
+  margin: 30px;
+  font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   background-color: #fff;
@@ -16,10 +16,12 @@ body {
 
 .container-searcher {
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .film-title {
-  font-family: "Gaegu";
+  font-family: inherit;
+  font-size: 20px;
   margin: 0, 10;
 }
 
@@ -62,10 +64,13 @@ body {
   padding: 20px;
   margin: 20px;
   cursor: pointer;
+  width: 270px;
+  text-align: center;
+  border: 1px solid #fcdee8;
 }
 
 .container-favorite {
-  border: 3px solid #A12AAA;
+  border: 1px solid #A12AAA;
   background-color: #e1b5e5;
 }
 

@@ -1,6 +1,6 @@
 body {
-    margin: 0;
-    font-size: $font-size-xl;
+    margin: 30px;
+    font-size: $font-size-l;
     font-family: $font-family-primary;
     font-weight: $normal;
     background-color: $color-primary;
@@ -12,20 +12,26 @@ body {
     text-align: center;
     font-family: $font-family-special;
 }
-.container-searcher{
+
+.container-searcher {
     text-align: center;
+    padding-bottom: 30px;
 }
-.film-title{
-    font-family: $font-family-special;
+
+.film-title {
+    font-family: inherit;
+    font-size: $font-size-m;
     margin:0, 10;
 }
-.input-film{
+
+.input-film {
     border-style: none;
     outline: none;
     border-bottom: 1px solid $color-secondary;
-    font-size: $font-size-m-plus;
+    font-size: $font-size-s;
 }
-.button-search{
+
+.button-search {
     background-color: $color-happy;
     cursor: pointer;
     color: $color-primary; 
@@ -34,28 +40,34 @@ body {
     height: 30px;
     border-radius: 5px;
     margin-left: 30px;
-    font-size: $font-size-m;
+    font-size: $font-size-xs;
 }
 
-.list{
+.list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
 }
-.container-no-favorite{
+
+.container-no-favorite {
     background-color: $color-happy-light;
     border-radius:5px;
     list-style:none;
     padding: 20px;
     margin: 20px;
     cursor: pointer;
+    width: 270px;
+    text-align: center;
+    border: 1px solid $color-happy-light;
 }
-.container-favorite{
-    border: 3px solid $color-favourite;
+
+.container-favorite {
+    border: 1px solid $color-favourite;
     background-color: $color-favourite-light;
 }
-.image-film{
+
+.image-film {
     border-radius: 5px;
 }
