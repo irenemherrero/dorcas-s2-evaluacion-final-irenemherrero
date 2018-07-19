@@ -15,11 +15,8 @@ function searchFilms() {
     })
     .then(function(responseJson) {
       console.log(responseJson);
-<<<<<<< HEAD
       var arrayFavouritesSaved = JSON.parse(localStorage.getItem("films-array"));
 
-=======
->>>>>>> bdc6b6f67608d62261174a4d716f174b0456370a
       var ul = document.createElement('ul');
       ul.classList.add("list");
       containerResults.innerHTML = '';
