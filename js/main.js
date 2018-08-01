@@ -8,7 +8,7 @@ var filmsArray = [];
 
 function searchFilms() {
   var inputContent = input.value;
-  var url = 'http://api.tvmaze.com/search/people?q=';
+  var url = 'http://api.tvmaze.com/search/shows?q=';
   fetch(url + inputContent)
     .then(function(response) {
       return response.json();
@@ -24,9 +24,9 @@ function searchFilms() {
       for (var i = 0; i < responseJson.length; i++) {
         var li = document.createElement('li');
         var title = document.createElement('h2');
-        var titleContent = document.createTextNode(responseJson[i].person.name);
+        var titleContent = document.createTextNode(responseJson[i].show.name);
         var image = document.createElement('img');
-        var country = document.createElement("p");
+
        
         
         li.classList.add('container-no-favorite');
@@ -35,20 +35,14 @@ function searchFilms() {
         title.appendChild(titleContent);
         
         image.classList.add('image-film');
-        if(responseJson[i].person.image === null) {
+        if(responseJson[i].show.image === null) {
           image.src = 'https://via.placeholder.com/210x295/cccccc/666666/?text=TV';
         } else {
-          image.src = responseJson[i].person.image.medium;
+          image.src = responseJson[i].show.image.medium;
         }
-        if(responseJson[i].person.country === null){
-          country.innerHTML = "Unknown country"; 
-        } else {
-          var countryContent = responseJson[i].person.country.name;
-          country.innerHTML = countryContent;
-        }
+        
         li.append(image);
         li.appendChild(title);
-        li.appendChild(country);
         li.addEventListener("click", changeFavorite);
         ul.appendChild(li);
 
