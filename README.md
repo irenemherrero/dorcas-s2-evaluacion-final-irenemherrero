@@ -1,5 +1,7 @@
 Evaluación final - Sprint 2 - Buscador de series
 ------
+Ejercicio realizado en el Sprint 2 del curso de Programación Front-End de Adalab, en el que se evalúan los conocimientos adquiridos durante dicho periodo.
+
 Objetivo
 -------
 
