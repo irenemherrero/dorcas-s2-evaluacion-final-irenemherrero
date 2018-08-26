@@ -1,11 +1,35 @@
-Evaluación final del Sprint 2 de Adalab.
+Evaluación final - Sprint 2 - Buscador de series
+------
+Objetivo
+-------
 
-Objetivo:
+El ejercicio consiste en desarrollar una aplicación web de búsqueda de series de TV.
 
-Creación de una página web de búsqueda de series a través de una api. 
+La aplicación consta de dos partes:
 
-Funcionalidad extra:
+1. Un campo de texto y un botón para buscar series por su título
+2. Un listado de resultados de búsqueda donde aparece el cartel de la serie y el título
 
-Marcar series favoritas con un diseño diferente al neutro y que se guarden en localStorage para que, si se vuelve a hacer la misma búsqueda, se mantengan guardadas las series marcadas.
+Una vez aparecen los resultados de búsqueda, podremos indicar cuáles son nuestros favoritos. Para ello, al hacer clic sobre un resultado cambia el color de fondo y se pone un borde alrededor de la tarjeta.
 
-En proceso: que cuando se quite la selección de una serie se elimine, a parte del formato, el objeto del array del localStorage.
+Criterios de evaluación
+-------
+1. Control de versiones
+
+- Uso de control de versiones con ramas para nuevas funcionalidades
+
+2. JavaScript básico
+
+- Crear código JavaScript con sintaxis correcta, bien estructurado e indentado 
+- Usar variables para almacenar información y re‒asignar valores
+- Usar condicionales para ejecutar acciones distintas en función de una condición 
+- Saber recorrer listados de datos para procesarlos
+- Usar funciones para estructurar el código
+- Saber modificar la información del DOM para añadir contenido dinámico 
+- Saber escuchar eventos del DOM y actuar en consecuencia
+
+3. AJAX y APIs
+
+- Crear peticiones con fetch y promesas 
+- Gestionar información en formato JSON
+
